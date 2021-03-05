@@ -1,0 +1,75 @@
+<nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+  <a class="navbar-brand" href="#"><img src="../../../assets/img/logo.png" style="width: 130px"></a>
+  <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" [ngbCollapse]="isMenuCollapsed">
+    <form class="form-inline my-2 my-lg-0 ml-auto">
+      <button type="button" class="btn btn-success my-2 my-sm-0" (click)="abrirModalNuevaApp(modalNuevaApp)">
+        Nueva aplicación <i class="fas fa-plus"></i></button>
+    </form>
+  </div>
+</nav>
+
+<!--Modal nueva aplicacion-->
+<ng-template #modalNuevaApp let-modal>
+  <div class="modal-body">
+    <div class="row">
+      <div class="col-4">
+        <img id="formImagenApp" class="img-fluid" src="../../../assets/{{iconoURL}}">
+      </div>
+      <div class="col-8">
+        <form id="form-app" [formGroup]="formularioAplicacion">
+          Icono:
+          <select [ngClass]="{'form-input-error':iconoApp.invalid && iconoApp.touched}" formControlName="iconoApp"
+            class="form-control" (change)="visualizarImagen()">
+            <option *ngFor="let icono of iconos" value="img/app-icons/{{icono}}">{{icono}}</option>
+          </select>
+          <div *ngIf="iconoApp.invalid && (iconoApp.touched)" class="form-error">
+            <span *ngIf="iconoApp.errors.required">Campo obligatorio</span>
+          </div>
+          <input
+            [ngClass]="{'form-input-error':nombreAplicacion.invalid && (nombreAplicacion.dirty || nombreAplicacion.touched)}"
+            formControlName="nombreAplicacion" class="form-control" type="text" placeholder="Nombre aplicación">
+          <div *ngIf="nombreAplicacion.invalid && (nombreAplicacion.touched)" class="form-error">
+            <span *ngIf="nombreAplicacion.errors.required">Campo obligatorio</span>
+          </div>
+          <textarea [ngClass]="{'form-input-error':descripcion.invalid && (descripcion.dirty || descripcion.touched)}"
+            formControlName="descripcion" class="form-control" type="text" placeholder="Descripción"></textarea>
+          <div *ngIf="descripcion.invalid && (descripcion.touched)" class="form-error">
+            <span *ngIf="descripcion.errors.required">Campo obligatorio</span>
+          </div>
+          <input
+            [ngClass]="{'form-input-error':desarrollador.invalid && (desarrollador.dirty || desarrollador.touched)}"
+            formControlName="desarrollador" class="form-control" type="text" placeholder="Desarrollador">
+          <div *ngIf="desarrollador.invalid && (desarrollador.touched)" class="form-error">
+            <span *ngIf="desarrollador.errors.required">Campo obligatorio</span>
+          </div>
+          <input [ngClass]="{'form-input-error':precio.invalid && (precio.dirty || precio.touched)}"
+            formControlName="precio" class="form-control" type="text" placeholder="Precio">
+          <div *ngIf="precio.invalid && (precio.touched)" class="form-error">
+            <span *ngIf="precio.errors.required">Campo obligatorio</span>
+          </div>
+          <input [ngClass]="{'form-input-error':descargas.invalid && (descargas.dirty || descargas.touched)}"
+            formControlName="descargas" class="form-control" type="text" placeholder="Descargas">
+          <div *ngIf="descargas.invalid && (descargas.touched)" class="form-error">
+            <span *ngIf="descargas.errors.required">Campo obligatorio</span>
+          </div>
+          <input [ngClass]="{'form-input-error':calificacion.invalid && (calificacion.dirty || calificacion.touched)}"
+            formControlName="calificacion" class="form-control" type="text" placeholder="Calificacion">
+          <div *ngIf="calificacion.invalid && (calificacion.touched)" class="form-error">
+            <span *ngIf="calificacion.errors.required">Campo obligatorio</span>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div id="estrellas-app" class="text-center">
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn btn-secondary" (click)="modal.close('Boton Cerrar')">Cerrar</button>
+    <button [disabled]="!formularioAplicacion.valid" type="button" class="btn btn-success" (click)="guardarAplicacion()"
+      ngbAutoFocus>Guardar</button>
+  </div>
+</ng-template>

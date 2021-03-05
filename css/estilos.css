@@ -1,0 +1,69 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+
+
+body{
+    background-color: #f71c30;
+    font-size: 'Roboto', sans-serif;
+}
+
+.navbarPersonalizada{
+    background-color: #051200;
+    width: 100%;
+    margin-top: 0px !important;
+    
+}
+
+.Titulo{
+    font-size: 60px !important;
+    font-size: 'Roboto', sans-serif;
+    font-weight: bolder;
+    margin-left: -30% !important;
+    color: #f71c30 !important;
+    
+    
+}
+.imgLogo{
+    border-radius: 40px;
+    height: 100px;
+}
+
+.icons1{
+    font-size: 60px !important;
+    font-size: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: #007ab3;
+    padding: 10px;
+  
+}
+.icons2{
+    font-size: 60px !important;
+    font-size: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: #678e3d;
+    padding: 10px;
+  
+}
+.icons3{
+    font-size: 60px !important;
+    font-size: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: #f71c30;
+    padding: 10px;
+  
+}
+
+.slogan{
+    color: #007ab3 !important;
+    font-size: 20px;
+    margin-left: -35% !important;
+
+
+}
+.navbar{
+    background-color: #051200 !important;
+}
+
+.nav-linktitulo{
+    text-align: center !important;
+}

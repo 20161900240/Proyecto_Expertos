@@ -1,0 +1,319 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "Sofia Pro", sans-serif;
+  src: url("./assets/fonts/sofiapro-bold.woff");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Proxima Nova", sans-serif;
+  src: url("./assets/fonts/proxima-nova-regular.woff2");
+}
+
+:root {
+  --color-primary: #f04c53;
+  --color-borders: #e6ecec;
+  --color-whatsapp: #69d56e;
+  --color-facebook: #0075fa;
+  --color-twitter: #1da1f1;
+  --color-bg-icons: #f0f0f1;
+  --color-font: #535353;
+  --font-title: "Sofia Pro", sans-serif;
+  --font-text: "Proxima Nova", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-title);
+}
+
+ul {
+  list-style: none;
+}
+
+figure {
+  margin: 0;
+}
+
+/* Commons */
+.btn-main {
+  background-color: var(--color-primary);
+  color: white;
+  width: 150px;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.btn-upload {
+  cursor: pointer;
+}
+
+.btn-upload:hover {
+  color: var(--color-primary);
+}
+
+.btn-main-outline {
+  padding: 10px;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  background-color: white;
+}
+
+.btn-main-outline:hover {
+  color: var(--color-primary);
+  background-color: #fefefe;
+}
+
+.text-gray {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.btn-icon {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-bg-icons);
+  color: initial;
+  margin-bottom: 5px;
+}
+
+.btn-social {
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-follow {
+  padding: 5px 20px;
+}
+
+.bg-main {
+  background-color: var(--color-primary);
+}
+
+.color-main {
+  color: var(--color-primary);
+}
+
+.bg-wha {
+  background-color: var(--color-whatsapp);
+}
+
+.bg-facebook {
+  background-color: var(--color-facebook);
+}
+
+.bg-twitter {
+  background-color: var(--color-twitter);
+}
+
+.user-img {
+  width: 70px;
+}
+
+.user-img-md {
+  width: 60px;
+}
+
+.border-radius-input {
+  border-radius: 10px;
+}
+
+.input {
+  padding: 25px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* Navbar */
+.nav {
+  border-bottom: 1px solid var(--color-borders);
+}
+
+
+/* Sidebar */
+
+.side-link {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  font-family: var(--font-title);
+}
+
+.active {
+  color: var(--color-primary);
+}
+
+/* Main */
+
+.main {
+  padding-top: 50px;
+}
+
+.tiktok-list {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.tiktok {
+  color: var(--color-font);
+}
+
+.tiktok__header {
+  display: flex;
+}
+
+.tiktok__desc {
+  display: flex;
+}
+
+.tiktok__name {
+  display: flex;
+}
+
+.tiktok__media {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.user-info strong {
+  color: initial;
+}
+
+.user-info span {
+  font-size: 0.9em;
+}
+
+.hashtags ul {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.hashtags ul li {
+  font-weight: bold;
+}
+
+.tiktok-video {
+  width: 60%;
+  border-radius: 15px;
+  margin-left: 8%;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+/* Side content */
+
+.social-media {
+  margin-bottom: 20px;
+}
+
+.social-media ul {
+  display: flex;
+}
+
+.side-card {
+  border-radius: 15px;
+  border: 1px solid var(--color-borders);
+  padding: 25px 20px 10px;
+  margin-bottom: 60px;
+}
+
+.suggested-user {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.side-button {
+  font-size: 0.8em;
+  height: 10%;
+  font-weight: bold;
+  padding: 5px 20px;
+}
+
+.form-error {
+  color: #CD0052;
+  margin: 5px;
+  margin-top: 0px;
+  font-size: .8rem;
+}
+
+.form-input-error {
+  border-color: #DD0000;
+}
+
+.form-input-error:focus,
+.form-input-error:focus {
+  outline: 0px;
+  border-color: #DD0000;
+  box-shadow: 0 0 0 0.2rem rgba(221, 0, 0, .25);
+}
+
+.filter{
+  filter: saturate(2);
+}
+
+
+/* Modals */
+.profile-pic-form {
+  border: 1px solid var(--color-borders);
+  cursor: pointer;
+}
+
+
+.pp-active {
+  border: 3px solid var(--color-primary);
+}
+
+/* Media queries */
+@media screen and (max-width: 426px) {
+  .buttons {
+    display: none;
+  }
+
+  .tiktok-video {
+    width: 100%;
+  }
+
+  .tiktok__header {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 376px) {
+
+
+  .tiktok__header {
+    font-size: 12px;
+  }
+
+  .tiktok__desc {
+    font-size: 10px;
+  }
+}

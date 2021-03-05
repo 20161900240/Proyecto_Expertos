@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #7E7E7E;
+}
+
+.bg-white {
+    background-color: #FFFFFF;
+}
+
+.openbtn {
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #FFFFFF;
+    color: #777A7D;
+    padding: 10px 15px;
+    border: none;
+}
+
+nav form {
+    width: 650px;
+    max-width: 65%;
+}
+
+nav i {
+    font-size: 20px;
+}
+
+nav i.fa-search {
+    position: absolute;
+    left: 0;
+    padding: 11px 15px;
+    color: #73777A;
+}
+
+.input-search {
+    padding: 20px 10px 20px 50px;
+    border-radius: 5px;
+    background-color: #F1F3F4;
+    color: #73777A;
+    font-weight: 500;
+}
+
+.box {
+    border: 1px solid #D2D3D3;
+}
+
+.box-left {
+    width: 22%;
+    min-width: 80px;
+    padding: 10px 40px 10px 0px;
+}
+
+.box-right {
+    width: 78%;
+    min-width: 180px;
+    border-left: 1px solid #D2D3D3;
+}
+
+.box-right td {
+    padding: 20px 10px;
+}
+
+.box-right tr {
+    border-bottom: 1px solid #D2D3D3;
+}
+
+.box-right tr span{
+    cursor: pointer;
+}
+
+.box-right table,
+.ventana-newMail main table {
+    width: 100%;
+}
+
+
+.boton {
+    width: 146px;
+    padding: 5px 40px;
+    border-radius: 15px;
+}
+
+.boton-1 {
+    color: #797979;
+    background-color: #FFFFFF;
+    border: 1px solid #dad5d5;
+}
+
+.boton-1:hover {
+    color: #797979;
+    box-shadow: 0px 0px 7px inset #d8d8d8;
+}
+
+.boton-2 {
+    color: #FFFFFF;
+    background-color: #DC4B3E;
+    border: 1px solid #DC4B3E;
+}
+
+.boton-2:hover {
+    color: #FFFFFF;
+    background-color: #f52715;
+    box-shadow: 0px 0px 5px inset #ffffff;
+}
+
+.box-left>div {
+    padding-left: 40px;
+    border-radius: 0px 10px 10px 0px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/*.box-left > div#recibidos{
+    background-color: #FCE8E6;
+    color: #DD4238;
+    font-weight: bold;
+}*/
+
+.box-left>div.categoria:hover {
+    background-color: #edf0f3;
+}
+
+/*.box-left a:focus:not(#recibidos){
+    background-color:#E8EAED;
+    font-weight: bold;
+}*/
+
+.box-right table {
+    font-size: 18px;
+}
+
+.destacado {
+    color: #E6CC10;
+}
+
+.no-destacado {
+    color: #828282;
+}
+
+.box-right i.fa-trash-alt {
+    color: #EA7171;
+}
+
+.ventana-newMail {
+    width: 700px;
+    max-width: 50%;
+    position: fixed;
+    border: 1px solid #A2A2A2;
+    border-radius: 15px 15px 0px 0px;
+    bottom: 0;
+    right: 20px;
+}
+
+.ventana-newMail header {
+    background-color: #404040;
+    color: #FFFFFF;
+    border-radius: 10px 10px 0px 0px;
+    padding: 15px;
+}
+
+.ventana-newMail header button {
+    padding: 0px 10px;
+    background-color: #404040;
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
+.ventana-newMail main{
+    height: 100%;
+    background-color: #FFF;
+    padding: 30px;
+}
+
+/*Responsive Design (Media Query)*/
+/***Extra small devices (portrait phones, less than 576px)***/
+@media (max-width: 575.98px) {
+    ul.navbar-nav {
+        display: none;
+    }
+
+    nav form {
+        max-width: 85%;
+    }
+
+    .box-left {
+        width: 100%;
+    }
+    .box-right{
+        width: 100%;
+    }
+
+}
+
+/***Small devices (landscape phones, 576px and up)***/
+@media (min-width: 576px) and (max-width: 767.98px) {
+    ul.navbar-nav {
+        display: none;
+    }
+
+    nav form {
+        max-width: 85%;
+    }
+
+    .box-left {
+        width: 100%;
+    }
+    .box-right{
+        width: 100%;
+    }
+
+}
+
+/***Medium devices (tablets, 768px and up)***/
+@media (min-width: 768px) and (max-width: 991.98px) {
+    ul.navbar-nav {
+        display: none;
+    }
+
+    .box-left>div {
+        padding-left: 10px;
+    }
+
+}
+
+/***Large devices (desktops, 992px and up)***/
+@media (min-width: 992px) and (max-width: 1199.98px) {}
+
+/***Extra large devices (large desktops, 1200px and up)***/
+@media (min-width: 1200px) {}

@@ -1,0 +1,278 @@
+<nav class="navbar navbar-expand-lg navbar-light nav">
+  <a class="navbar-brand" href="#">
+    <figure>
+      <img src="../assets/images/tiktoklogo2.svg" alt="Tiktok icon" />
+      <img src="../assets/images/tiktoklogo.svg" alt="Tiktok logo" />
+    </figure>
+  </a>
+  <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
+    <i class="fas fa-bars color-main"></i>
+  </button>
+
+  <div class="collapse navbar-collapse" [ngbCollapse]="isMenuCollapsed">
+    <form class="form-inline ml-auto">
+      <i class="fas fa-cloud-upload-alt fa-2x mr-3 mb-3 mb-md-0 btn-upload" id="btn-upload"
+        (click)="modalUpload(uploadModal)"></i>
+      <span class="row">
+        <ng-container *ngIf="!getAuthService().loggedIn()">
+          <span class="col-lg-6 col-md-6">
+            <button class="btn btn-main mb-3 mb-md-0" type="button" id="btn-login" (click)="modalLogin(loginModal)">
+              Login
+            </button>
+          </span>
+        </ng-container>
+        <ng-container *ngIf="getAuthService().loggedIn()">
+          <span class="col-lg-6 col-md-6">
+            <button class="btn btn-main mb-3" id="btn-logout" type="button" (click)="getAuthService().logout()">
+              Cerrar sesión
+            </button>
+          </span>
+        </ng-container>
+        <span class="col-lg-12 col-md-6 d-md-none">
+          <button class="btn btn-main mb-3" id="btn-create" type="button" (click)="modalCrearCuenta(createModal)">
+            Crear cuenta
+          </button>
+        </span>
+      </span>
+    </form>
+  </div>
+</nav>
+<main class="container-fluid main">
+  <div class="row">
+    <div class="col-lg-2 d-none d-lg-block">
+      <aside class="sidebar">
+        <ul>
+          <li class="side-link active">
+            <i class="fas fa-home fa-lg mr-4"></i> For You
+          </li>
+          <li class="side-link">
+            <i class="fas fa-user-friends fa-lg mr-4"></i>Following
+          </li>
+        </ul>
+        <ng-container *ngIf="!getAuthService().loggedIn()">
+          <p class="text-gray small mb-4">
+            Log in to follow creators, like videos and view comments
+          </p>
+          <button class="btn btn-main-outline btn-block btn-side font-weight-bold" id="btn-create-side" type="button"
+            (click)="modalCrearCuenta(createModal)">
+            Crear cuenta
+          </button>
+        </ng-container>
+      </aside>
+    </div>
+    <div class="col-lg-7 col-md-12">
+      <!--Lista tiktoks-->
+      <app-tiktoks #listaTiktoks></app-tiktoks>
+    </div>
+    <div class="col-lg-3 d-none d-lg-block">
+      <section class="side-content">
+        <div class="social-media">
+          <ul>
+            <li class="mr-4 bg-main rounded-circle btn-social">
+              <i class="fas fa-link fa-lg"></i>
+            </li>
+            <li class="mr-4 rounded-circle bg-wha btn-social">
+              <i class="fab fa-whatsapp fa-lg"></i>
+            </li>
+            <li class="mr-4 rounded-circle bg-facebook btn-social">
+              <i class="fab fa-facebook-f fa-lg"></i>
+            </li>
+            <li class="mr-4 rounded-circle bg-twitter btn-social">
+              <i class="fab fa-twitter fa-lg"></i>
+            </li>
+          </ul>
+        </div>
+        <!--Lista Usuarios-->
+        <app-usuarios #listaUsuarios></app-usuarios>
+        <!--Lista hashtags-->
+        <app-hashtags #listaHashtags></app-hashtags>
+      </section>
+    </div>
+  </div>
+</main>
+
+<!--Modal Login-->
+<ng-template #loginModal let-modal>
+  <div class="modal-body">
+    <h4 class="modal-title text-center font-weight-bold" id="loginModalTitle">
+      Login
+    </h4>
+    <form [formGroup]="formularioLogin">
+      <div class="form-group">
+        <label for="">Usuario</label>
+        <input [ngClass]="{'form-input-error':usuarioLogin.invalid && (usuarioLogin.dirty || usuarioLogin.touched)}"
+          formControlName="usuario" type="text" class="form-control border-radius-input input" placeholder="Usuario"
+          id="user-input" />
+        <div *ngIf="usuarioLogin.invalid && (usuarioLogin.touched)" class="form-error">
+          <span *ngIf="usuarioLogin.errors.required">Campo obligatorio</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="">Contraseña</label>
+        <input [ngClass]="{'form-input-error':passwordLogin.invalid && (passwordLogin.dirty || passwordLogin.touched)}"
+          formControlName="password" type="password" class="form-control border-radius-input input"
+          placeholder="Contraseña" id="user-pass" />
+        <div *ngIf="passwordLogin.invalid && (passwordLogin.touched)" class="form-error">
+          <span *ngIf="passwordLogin.errors.required">Campo obligatorio</span>
+        </div>
+      </div>
+    </form>
+    <div *ngIf="!datosValidos" class="form-error mb-2">
+      <span>Datos incorrectos, intente de nuevo</span>
+    </div>
+    <div class="text-center">
+      <button [disabled]="!formularioLogin.valid" (click)="loginUsuario()" ngbAutoFocus class="btn btn-main btn-lg"
+        id="btn-login-modal">
+        Login
+      </button>
+    </div>
+  </div>
+</ng-template>
+
+<!--Modal Upload-->
+<ng-template #uploadModal let-modal>
+  <ng-container *ngIf="getAuthService().loggedIn()">
+    <form [formGroup]="formularioTiktok">
+      <div class="modal-body">
+        <h4 class="modal-title text-center font-weight-bold" id="uploadModalTitle">
+          Nuevo TikTok
+        </h4>
+        <div class="form-group">
+          <label for="">Video</label>
+          <select [ngClass]="{'form-input-error':video.invalid && (video.dirty || video.touched)}"
+            formControlName="video" class="custom-select">
+            <option value="0">Selecciona un video</option>
+            <option value="videos/1.mp4">Video 1</option>
+            <option value="videos/2.mp4">Video 2</option>
+            <option value="videos/3.mp4">Video 3</option>
+            <option value="videos/4.mp4">Video 4</option>
+            <option value="videos/5.mp4">Video 5</option>
+            <option value="videos/6.mp4">Video 6</option>
+            <option value="videos/7.mp4">Video 7</option>
+            <option value="videos/8.mp4">Video 8</option>
+          </select>
+          <div *ngIf="video.invalid && (video.touched)" class="form-error">
+            <span *ngIf="video.errors.required">Campo obligatorio</span>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="">Hashtags</label>
+        <input [ngClass]="{'form-input-error':hashtags.invalid && (hashtags.dirty || hashtags.touched)}" type="text"
+          formControlName="hashtags" class="form-control border-radius-input input" placeholder="Hashtags"
+          id="hashtag-input" />
+        <div *ngIf="hashtags.invalid && (hashtags.touched)" class="form-error">
+          <span *ngIf="hashtags.errors.required">Campo obligatorio</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="">Mensaje</label>
+        <input [ngClass]="{'form-input-error':mensaje.invalid && (mensaje.dirty || mensaje.touched)}" type="text"
+          formControlName="mensaje" class="form-control border-radius-input input" placeholder="Mensaje"
+          id="msg-input" />
+        <div *ngIf="mensaje.invalid && (mensaje.touched)" class="form-error">
+          <span *ngIf="mensaje.errors.required">Campo obligatorio</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="">Titulo Canción</label>
+        <input [ngClass]="{'form-input-error':tituloCancion.invalid && (tituloCancion.dirty || tituloCancion.touched)}"
+          formControlName="tituloCancion" type="text" class="form-control border-radius-input input"
+          placeholder="Titulo cancion" id="title-input" />
+        <div *ngIf="tituloCancion.invalid && (tituloCancion.touched)" class="form-error">
+          <span *ngIf="tituloCancion.errors.required">Campo obligatorio</span>
+        </div>
+        <div class="text-center">
+          <button [disabled]="!formularioTiktok.valid" ngbAutoFocus class="btn btn-main btn-lg mt-4" type="button"
+            id="btn-upload-video" (click)="publicarTiktok()">
+            Publicar
+          </button>
+        </div>
+      </div>
+    </form>
+  </ng-container>
+  <ng-container *ngIf="!getAuthService().loggedIn()">
+    <div class="form-error text-center p-5">
+      <h3>Inicia Sesion para Subir Tiktoks</h3>
+    </div>
+  </ng-container>
+</ng-template>
+
+<!--Modal Crear Usuario-->
+<ng-template #createModal let-modal>
+  <div class="modal-body">
+    <h4 class="modal-title text-center font-weight-bold" id="loginModalTitle">
+      Nueva cuenta
+    </h4>
+    <form [formGroup]="formularioCuenta">
+      <div class="form-group">
+        <label for="">Usuario</label>
+        <input [ngClass]="{'form-input-error':usuario.invalid && (usuario.dirty || usuario.touched)}" type="text"
+          class="form-control border-radius-input input" placeholder="Usuario" id="new-user"
+          formControlName="usuario" />
+        <div *ngIf="usuario.invalid && (usuario.touched)" class="form-error">
+          <span *ngIf="usuario.errors.required">Campo obligatorio</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="">Contraseña</label>
+        <input [ngClass]="{'form-input-error':password.invalid && (password.dirty || password.touched)}" type="password"
+          class="form-control border-radius-input input" placeholder="Contraseña" id="new-pass"
+          formControlName="password" />
+        <div *ngIf="password.invalid && (password.touched)" class="form-error">
+          <span *ngIf="password.errors.required">Campo obligatorio</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="">Confirmar contraseña</label>
+        <input [ngClass]="{'form-input-error':(confirmPassword.invalid && (confirmPassword.dirty || confirmPassword.touched)) || 
+          (confirmPassword.dirty && confirmPassword.value != password.value)} " type="password"
+          class="form-control border-radius-input input" placeholder="Contraseña" id="new-confirm"
+          formControlName="confirmPassword" />
+        <div *ngIf="confirmPassword.invalid && (confirmPassword.touched)" class="form-error">
+          <span *ngIf="confirmPassword.errors.required">Campo obligatorio</span>
+        </div>
+        <div *ngIf="!isEqualPassword" class="form-error">
+          <span>Las contraseñas no coinciden</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="">Imagen de perfil</label>
+        <ul class="d-flex">
+          <li class="profile-pic-form mr-3 rounded-circle" (click)="toggleActive(urlImagen1)">
+            <img width="60" class="rounded-circle pp-form" [ngClass]="{'filter':imagenPerfilSeleccionada == urlImagen1}"
+              src="../assets/{{urlImagen1}}" alt="" id="profile-1" />
+          </li>
+
+          <li class="profile-pic-form mr-3 rounded-circle" (click)="toggleActive(urlImagen2)">
+            <img width="60" class="rounded-circle pp-form" [ngClass]="{'filter':imagenPerfilSeleccionada == urlImagen2}"
+              src="../assets/{{urlImagen2}}" alt="" id="profile-2" />
+          </li>
+
+          <li class="profile-pic-form mr-3 rounded-circle" (click)="toggleActive(urlImagen3)">
+            <img width="60" class="rounded-circle pp-form" [ngClass]="{'filter':imagenPerfilSeleccionada == urlImagen3}"
+              src="../assets/{{urlImagen3}}" alt="" id="profile-3" />
+          </li>
+
+          <li class="profile-pic-form mr-3 rounded-circle" (click)="toggleActive(urlImagen4)">
+            <img width="60" class="rounded-circle pp-form" [ngClass]="{'filter':imagenPerfilSeleccionada == urlImagen4}"
+              src="../assets/{{urlImagen4}}" alt="" id="profile-4" />
+          </li>
+          <li class="profile-pic-form mr-3 rounded-circle" (click)="toggleActive(urlImagen5)">
+            <img width="60" class="rounded-circle pp-form" [ngClass]="{'filter':imagenPerfilSeleccionada == urlImagen5}"
+              src="../assets/{{urlImagen5}}" alt="" id="profile-5" />
+          </li>
+        </ul>
+        <div *ngIf="!isImagen" class="form-error">
+          <span>No ha seleccionado una imagen</span>
+        </div>
+      </div>
+    </form>
+    <div class="text-center mt-4">
+      <button [disabled]="!formularioCuenta.valid" ngbAutoFocus class="btn btn-main btn-lg" id="btn-create-user"
+        (click)="crearUsuario()">
+        Crear cuenta
+      </button>
+    </div>
+  </div>
+</ng-template>

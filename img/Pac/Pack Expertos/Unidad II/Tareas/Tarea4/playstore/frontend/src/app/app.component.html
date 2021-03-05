@@ -1,0 +1,10 @@
+<!--Header-->
+<app-header #header (onGuardarAplicacion)="recargarAplicaciones($event)"></app-header>
+<!---->
+
+<main role="main" class="container starter-template">
+  <!--Applications-->
+  <app-applications #applications (onSeleccionarCategoria)="verCategoria($event)"></app-applications>
+  <!---->
+</main><!-- /.container -->
+<!--<router-outlet></router-outlet>-->

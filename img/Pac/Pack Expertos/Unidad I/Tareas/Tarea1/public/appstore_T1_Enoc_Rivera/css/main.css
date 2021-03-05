@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.input-error {
+    border: 1px solid #ff0000;
+}
+body {
+    font-family: 'Exo 2', sans-serif;
+    padding-top: 5rem;
+}
+
+/*.starter-template {
+    padding: 3rem 1.5rem;
+    text-align: center;
+}*/
+.pointer{
+    cursor: pointer;
+}
+.bg-black {
+    background-color: #000;
+}
+
+#select-categoria {
+    font-size: 24px;
+}
+
+div.card {
+    padding: 10px;
+}
+
+div.card:hover {
+    background-color: #E0A800;
+    color: #fff;
+}
+
+div.card:hover p.card-text,
+div.card:hover i.fa-star {
+    color: #fff;
+}
+
+div.card img.card-img-top {
+    height: auto;
+    max-width: 100%;
+    /*width: 100%;*/
+    /*border-radius: 0;*/
+}
+
+div.card-body {
+    padding: 2px;
+}
+
+p.card-text {
+    color: #5c5b5b;
+    font-size: 13px;
+}
+
+i.fa-star {
+    color: #E0A800;
+}
+
+.card-title,
+p.card-price,
+.comentarios-modal>p:nth-child(1) {
+    font-weight: 600;
+}
+
+/*Ventana modal*/
+.imgApp-modal {
+    height: 100px;
+}
+
+.datosApp-modal {
+    width: 70%;
+    margin-left: auto;
+}
+
+.datosApp-modal p, .comentarios-modal p {
+    margin-bottom: 0px;
+}
+
+#modalAplicacion i.fa-star {
+    color: #62a301;
+}
+
+.imgUser-modal {
+    border-radius: 50%;
+}
+.comentarios-modal{
+    width: 85%;
+    margin-left: auto;
+}
+/**/
+
+/***Extra small devices (portrait phones, less than 576px)***/
+@media (max-width: 575.98px) {
+    .datosApp-modal, .comentarios-modal {
+        width: 100%;
+        clear: left;
+    }
+}

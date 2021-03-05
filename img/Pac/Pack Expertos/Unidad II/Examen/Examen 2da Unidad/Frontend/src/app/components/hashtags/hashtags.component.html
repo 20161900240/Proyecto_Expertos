@@ -1,0 +1,12 @@
+<div class="side-card">
+  <h4 class="mb-4">Discover</h4>
+  <ul id="hash-list">
+    <li class="d-flex justify-content-between align-items-center" *ngFor="let hashtag of hashtags" >
+      <div class="hashtag">
+        <strong>#{{hashtag.hashtag}}</strong>
+        <p><span [innerHTML]="convertirHashtags(hashtag.videos)"></span> of videos</p>
+      </div>
+      <i class="fas fa-chevron-right cursor-pointer" (click)="renderTiktoks()"></i>
+    </li>
+  </ul>
+</div>

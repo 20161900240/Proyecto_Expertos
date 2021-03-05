@@ -1,0 +1,307 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Titles*/
+@font-face {
+    font-family: Sofia Pro Bold;
+    src: url(../fonts/sofiapro-bold.woff);
+}
+
+/*Text*/
+@font-face {
+    font-family: Proxima Nova Regular;
+    src: url(../fonts/proxima-nova-regular.woff2);
+}
+
+.bg-white {
+    background-color: #FFF;
+}
+
+body {
+    font-family: Proxima Nova Regular !important;
+}
+
+.font-bold {
+    font-family: Sofia Pro Bold !important;
+    font-weight: bold;
+}
+
+nav {
+    border-bottom: 3px solid #F9FAFA;
+}
+
+i.fa-cloud-upload-alt {
+    font-size: 20px;
+}
+
+nav i.fa-cloud-upload-alt {
+    color: #000;
+}
+
+nav i.fa-cloud-upload-alt:hover {
+    color: #FF2C55;
+}
+
+i.fa-home {
+    font-size: 24px;
+}
+
+li {
+    list-style: none;
+}
+
+.btn-red {
+    min-width: 130px;
+    border-radius: 0px;
+    background-color: #FF2C55;
+    color: #FFF;
+}
+
+.btn-red:hover {
+    background-color: #f50b3a;
+    color: #FFF;
+}
+
+.btn-outline-red {
+    border-radius: 0px;
+    background-color: #FFF;
+    color: #FF3E64;
+    border-color: #FF9AAD;
+}
+
+.btn-outline-red:hover {
+    background-color: #FF3E64;
+    color: #FFF;
+    border-color: #FF3E64;
+}
+
+/*Colors*/
+.light-black {
+    color: #272933;
+}
+
+.black {
+    color: #090909;
+}
+
+.light-red {
+    color: #FF2C55;
+}
+
+.light-gray {
+    color: #b8b5b5;
+}
+
+.gray {
+    color: #8C8C8C;
+}
+
+.bold-gray {
+    color: #888888;
+}
+
+/**/
+.innerSection1 {
+    width: 170px;
+    max-width: 100%;
+}
+
+.innerSection1 li {
+    font-size: 20px;
+}
+
+.innerSection1 p {
+    font-size: 13px;
+}
+
+.innerSection1 .btn-outline-red {
+    min-width: 170px;
+}
+
+.btn-outline-red {
+    min-width: 80px;
+}
+
+#section2,
+#section3 {
+    font-size: 15px;
+}
+
+.section-profile {
+    padding-left: 20%;
+}
+
+.li-video {
+    padding-left: 18%;
+}
+
+.section-video {
+    width: 380px;
+    max-width: 100%;
+}
+
+.img-profile {
+    width: 60px;
+}
+
+.video {
+    width: 85%;
+    border-radius: 10px;
+}
+
+.video:focus {
+    outline: none;
+}
+
+.li-video {
+    position: relative;
+}
+
+.ul-video-options {
+    position: absolute;
+    bottom: 2px;
+    right: 0px;
+}
+
+.ul-video-options li {
+    background-color: #F1F1F2;
+    font-size: 18px;
+    padding: 3px 8px;
+    border-radius: 50%;
+}
+
+#section3>div {
+    width: 330px;
+    max-width: 100%;
+}
+
+#section3>div>ul i {
+    color: #FFF;
+    font-size: 16px;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.box-account {
+    border: 3px solid #F9FAFA;
+}
+
+.box-account .img-profile {
+    width: 45px;
+    height: 45px;
+}
+
+i.fa-link {
+    background-color: #FF2F57;
+}
+
+i.fa-whatsapp {
+    background-color: #24D366;
+}
+
+i.fa-facebook-f {
+    background-color: #0075FA;
+}
+
+i.fa-twitter {
+    background-color: #1DA1F1;
+}
+
+#section3 .div-button-position {
+    position: absolute;
+    right: 0;
+}
+
+#section3 .discover {
+    cursor: pointer;
+}
+
+#section3 .div-icon-arrow {
+    position: absolute;
+    right: 0;
+}
+
+#section3 i.fa-chevron-right {
+    color: #3A3C46;
+    font-size: 13px;
+}
+
+.label-inputModal {
+    width: 400px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.input-modal {
+    border-radius: 10px;
+}
+
+.modal-content .btn-red {
+    padding: 10px;
+}
+
+.input-error {
+    border: 1px solid #E9838C;
+}
+
+#modalComentarios .modal-header {
+    background-color: #FF2C55;
+    color: #FFF;
+}
+
+.datosComentarios {
+    padding-left: 25%;
+}
+
+#modalComentarios textarea.form-control {
+    width: 80%;
+    margin-left: auto;
+}
+
+@media (max-width: 320px) {
+    #section3 .div-button-position {
+        position: relative;
+    }
+}
+
+@media (max-width: 575.98px) {
+    #modalComentarios textarea.form-control {
+        width: 100%;
+        clear: left;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .video {
+        width: 90%;
+    }
+}
+
+@media (max-width: 767.98px) {
+    nav .btn-outline-red {
+        min-width: 130px;
+    }
+
+    .section-video {
+        width: 90%;
+    }
+
+    .section-profile {
+        padding-left: 15%;
+    }
+
+    .li-video {
+        padding-left: 5px;
+    }
+
+}
+
+@media (min-width: 992px) and (max-width: 1050px) {
+    #section3 .div-button-position {
+        position: relative;
+    }
+}

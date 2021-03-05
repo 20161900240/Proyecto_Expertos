@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lugo</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css" />
+    <!--FontAwesome-->
+    <link rel="stylesheet" href="css/all.css">
+    <!--Google Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top pl-md-5 py-0">
+        <a class="navbar-brand pl-md-5" href="#">lugo</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav ml-md-auto">
+                <li>
+                    <select class="fa" id="usuarioActual" onchange="cambiarUsuario()">
+                        <!--Contenido Dinamico-->
+                    </select>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0 ml-md-3">
+                <button class="btn btn-purple my-2 my-sm-0" type="button" data-toggle="modal"
+                    data-target="#modalOrdenes">Ver Ordenes</button>
+            </form>
+        </div>
+    </nav>
+
+    <main role="main" class="container-fluid mt-5">
+        <div class="w-85 w-sm-100 mx-auto">
+            <h1 id="usuarioSeleccionado"></h1>
+            <h2>¿Que necesitas?</h2>
+            <div id="categorias" class="row my-5">
+                <!--Contenido dinamico-->
+            </div>
+            <button type="button" class="btn btn-purple mb-5" onclick="desplegarFormCategoria()">Nueva Categoria</button>
+            <div id="formulario-categoria" class="w-50 w-sm-100 mb-5" style="display: none;">
+                <h3>Formulario Nueva Categoria</h3>
+                <input type="text" id="form-categoria" class="form-control mb-3" placeholder="Nombre de Categoria">
+                <input type="text" id="form-descripcion" class="form-control mb-3" placeholder="Descripcion">
+                <label for="form-backgroundColor">Color de Fondo</label>
+                <input type="color" id="form-backgroundColor" class="form-control mb-3">
+                <input type="text" id="form-icono" class="form-control mb-3" placeholder="Icono">
+                <button type="button" class="btn btn-success mb-3" onclick="guardarCategoria()">Guardar Cambios</button>
+            </div>
+        </div>
+    </main><!-- /.container -->
+    <footer></footer>
+    <!-- Modal Ordenes Usuario -->
+    <div class="modal fade" id="modalOrdenes" tabindex="-1" role="dialog" aria-labelledby="modalOrdenesLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title" id="modalOrdenesLabel"></h1>
+                </div>
+                <div class="modal-body">
+                    <div id="ordenesInfo" class="w-85 mx-auto">
+                        <!--Contenido dinamico-->
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-purple" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Categoria -->
+    <div class="modal fade" id="modalCategoria" tabindex="-1" role="dialog" aria-labelledby="modalCategoriaLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title" id="modalCategoriaLabel">Restaurantes</h1>
+                </div>
+                <div class="modal-body">
+                    <div id="categoriaInfo" class="row w-90 mx-auto">
+                        <!--Contenido dinamico-->
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-purple" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal al pedir producto -->
+    <div class="modal fade" id="modalPedirProducto" tabindex="-1" role="dialog"
+        aria-labelledby="modalPedirProductoLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div id="productoInfo" class="w-90 mx-auto">
+                         <!--Contenido dinamico-->
+                    </div>
+                </div>
+                <div id="div-btn-procesar" class="modal-footer">
+                    <!--Contenido dinamico-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/controlador.js"></script>
+</body>
+
+</html>

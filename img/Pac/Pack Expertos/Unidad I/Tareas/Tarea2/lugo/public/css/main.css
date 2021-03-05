@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 5rem;
+    font-family: 'Epilogue', sans-serif;
+    color: #5C2E86;
+}
+.input-error {
+    border: 1px solid #ff0000;
+}
+.starter-template {
+    padding: 3rem 1.5rem;
+    text-align: center;
+}
+
+/*nav*/
+nav,
+footer {
+    background-color: #5C3286;
+}
+
+nav a.navbar-brand {
+    font-size: 60px;
+    font-weight: 900;
+}
+
+nav select{
+    background-color: #fff;
+    color: #775099;
+    font-size: 25px;
+    padding: 10px 10px 10px 15px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 30px;
+    /**/
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+
+}
+.btn-purple{
+    background-color: #440E70;
+    color: #E5DCEB;
+}
+.btn-purple:hover{
+    background-color: #8113db;
+    color: #FFF;
+}
+.btn-purple:focus{
+    box-shadow: 0px 0px 5px inset #FFF;
+    transition: box-shadow 0.4s ease-in-out;
+}
+nav form>.btn-purple, .modal-footer .btn-purple{
+    font-size: 20px;
+    padding: 10px 50px;
+    text-align: center;
+    vertical-align: middle;
+    border: 0;
+    border-radius: 30px;
+}
+.container-fluid h1 {
+    font-size: 46px;
+    font-weight: 900;
+}
+
+.container-fluid h2 {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.w-85 {
+    width: 85%;
+}
+.w-90{
+    width: 90%;
+}
+
+/**/
+/*Cards*/
+#categorias div.card {
+    padding: 20px 15px 5px;
+    border-radius: 20px;
+    max-width: 100%;
+    height: auto;
+    color: #FFF;
+}
+
+#categorias div.card .icono {
+    width: 45%;
+    padding: 25px 0px;
+    background-color: #FFF;
+    font-size: 30px;
+    font-weight: 900;
+    color: #5C2E86;
+    text-align: center;
+    border: 1px solid #CCCCC8;
+}
+
+#categorias div.card .card-body {
+    padding: 0;
+    padding-top:45px;
+}
+
+#categorias div.card .card-title {
+    font-size: 30px;
+    font-weight: 900; 
+}
+
+#categorias div.card .card-text {
+    font-size: 24px;
+}
+
+footer {
+    height: 100px;
+}
+/**/
+/*Modal*/
+.modal-header{
+    background-color: #5C2E86;
+    border-radius: 0px;
+    padding: 20px 30px 10px;
+}
+.modal-header h1, .modal-body h1{
+    color: #FFF;
+    font-weight: 900;
+}
+.modal-body{
+    padding:50px 0px;
+}
+#modalPedirProducto .modal-body{
+    padding:20px 0px;
+}
+.modal-body .card{
+    border-radius: 20px;
+}
+.modal-body .card img{
+    border-radius: 20px 20px 0px 0px;
+}
+.modal-body .card-img{
+    position: relative;
+}
+.modal-body .card-img h1{
+    position: absolute;
+    bottom: 0;
+    left:5%;
+}
+.modal-body > div#ordenesInfo{
+    border:1px solid #E7E7E7;
+    border-radius: 10px;
+    padding:30px 20px 70px;
+}
+.modal-body h2{
+    font-weight: 500;
+}
+.modal-body .btn-purple{
+    font-size: 16px;
+    padding: 5px 25px;
+    text-align: center;
+    vertical-align: middle;
+    border: 0;
+    border-radius: 20px;
+}
+.modal-body .modal-descripcion, .modal-body p.modal-price{
+    color: #818181;
+    font-size: 24px;
+}
+.modal-body .card-body .modal-descripcion{
+    font-size: 18px;
+}
+#modalPedirProducto .modal-descripcion{
+    font-size: 16px;
+}
+.modal-body p.modal-price{
+    font-weight: 900;
+}
+.modal-body hr{
+    clear: right;
+}
+.modal-footer{
+    border-top: 0px;
+}
+/**/
+/*Responsive Design (Media Query)*/
+/***Extra small devices (portrait phones, less than 576px)***/
+@media (max-width: 575.98px) {
+    #categorias div.card .icono {
+        width: 70%;
+        padding: 100px 0px;
+    }
+    .w-sm-100 {
+        width: 100% !important;
+    }
+}
+
+/***Small devices (landscape phones, 576px and up)***/
+@media (min-width: 576px) and (max-width: 767.98px) {
+    #categorias div.card .icono {
+        width: 70%;
+        padding: 80px 0px;
+    }
+}
+
+/***Medium devices (tablets, 768px and up)***/
+@media (min-width: 768px) and (max-width: 991.98px) {
+    #categorias div.card .icono {
+        width: 60%;
+        padding: 60px 0px;
+    }
+}
+
+/***Large devices (desktops, 992px and up)***/
+@media (min-width: 992px) and (max-width: 1199.98px) {}
+
+/***Extra large devices (large desktops, 1200px and up)***/
+@media (min-width: 1200px) {}

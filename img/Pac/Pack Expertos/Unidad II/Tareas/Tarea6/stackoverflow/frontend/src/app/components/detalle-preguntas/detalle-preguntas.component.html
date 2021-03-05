@@ -1,0 +1,67 @@
+<main class="container mt-5" id="detallePregunta" *ngIf="detallePregunta != null">
+  <div class="row">
+    <div class="col-12">
+      <h2><svg class="arrow" (click)="verPreguntas()" width="36" height="36" viewBox="0 0 36 36">
+          <path d="M16,0,16,32,0,16Z" /></svg> {{detallePregunta.titulo}}</h2>
+    </div>
+  </div>
+  <div class="row question">
+    <div class="col-1 text-center">
+      <div><svg class="arrow" onclick="votar(1)" width="36" height="36" viewBox="0 0 36 36">
+          <path d="M2 26h32L18 10 2 26z"></path>
+        </svg></div>
+      <div class="h4 text-muted m-0">{{detallePregunta.votos}}</div>
+      <div><svg class="arrow" onclick="votar(-1)" width="36" height="36" viewBox="0 0 36 36">
+          <path d="M2 10h32L18 26 2 10z"></path>
+        </svg></div>
+    </div>
+    <div class="col-10" [innerHTML]="detallePregunta.descripcion">
+    </div>
+    <div class="col-8">
+      <div>
+        <span class="badge badge-warning mr-1" *ngFor="let hashtag of detallePregunta.hashtags">{{hashtag}}</span>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="float-right text-center user-card" *ngFor="let usuario of detallePregunta.usuario">
+        <div class="text-muted small">{{detallePregunta.fecha}}</div>
+        <div><img src="../../../assets/{{usuario.urlImagen}}" class="small-profile-pic mr-2">{{usuario.nombre}}</div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h5>{{detallePregunta.numeroRespuestas}} Respuestas</h5>
+  </div>
+  <!-- Respuesta -->
+  <div class="row answer" *ngFor="let respuesta of array_respuestas">
+    <div class="col-1 text-center">
+      <div><svg class="arrow" onclick="votar(1)" width="36" height="36" viewBox="0 0 36 36">
+          <path d="M2 26h32L18 10 2 26z"></path>
+        </svg></div>
+      <div class="h4 text-muted m-0">{{respuesta.votos}}</div>
+      <div><svg class="arrow" onclick="votar(-1)" width="36" height="36" viewBox="0 0 36 36">
+          <path d="M2 10h32L18 26 2 10z"></path>
+        </svg></div>
+    </div>
+    <div class="col-10" [innerHTML]="respuesta.descripcion">
+    </div>
+    <div class="col-12">
+      <div class="float-right text-center user-card">
+        <div class="text-muted small">{{respuesta.fecha}}</div>
+        <div><img src="../../../assets/{{respuesta.usuario.urlImagen}}" class="small-profile-pic mr-2">{{respuesta.usuario.nombre}}</div>
+      </div>
+    </div>
+  </div>
+  <!-- Fin Respuesta -->
+
+  <!-- Formulario nueva respuesta -->
+  <div class="row">
+    <div class="col-12">
+      <h5>Nueva Respuesta</h5>
+      <textarea class="form-control" cols="30" rows="7" placeholder="Respuesta"></textarea>
+      <span class="small text-muted">Etiquetas permitidas: br, pre</span><br>
+      <button class="btn btn-outline-warning">Publicar</button>
+    </div>
+  </div>
+  <hr class="my-5">
+</main>
