@@ -19,10 +19,73 @@ body{
     font-size: 'Roboto', sans-serif;
     font-weight: bolder;
     margin-left: -30% !important;
-    color: #f71c30 !important;
-    
-    
+    color: #f71c30 !important; 
 }
+
+@media only screen and (max-width: 1200px) {
+    .Titulo{
+        font-size: 60px !important;
+        font-size: 'Roboto', sans-serif;
+        font-weight: bolder;
+        margin-left: -5% !important;
+        color: #f71c30 !important; 
+    }
+    .codigoHTML{
+        font-size: 20px !important;
+        text-align: center;
+        color: #f71c30;
+        background-color: #051200;
+        padding: 20px 10px;
+        border-radius: 40px;
+        font-weight: bold;
+    }
+
+    .linkINFO{
+        font-size: 40px !important;
+        background-color: #051200;
+        color: #007ab3 !important;
+        text-align: center;
+        border-radius: 40px;
+    }
+
+    .flechaabajo{
+        text-align: center;
+        font-size: 60px !important;
+        color: #678e3d;
+    }
+
+    .description{
+        background-color: #051200;
+        margin-top: 20px;
+        text-align: center;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        padding-right: 5px;
+        padding-left: 5px;
+        border-radius: 40px;
+        color: #678e3d;
+        font-size: 30px !important;
+        font-weight: bold;
+    }
+
+    .logos{
+        background-color: #051200;  
+        margin-top: 20px;
+        width: 100%;
+        color: #f71c30;
+        border-radius: 40px;
+        font-size: 60px !important;
+        padding: 10PX;
+        text-align: center;
+        
+    }
+
+  }
+
+
+
+
+
 .imgLogo{
     border-radius: 40px;
     height: 100px;
@@ -66,4 +129,136 @@ body{
 
 .nav-linktitulo{
     text-align: center !important;
+}
+
+.container-fluid{
+    width: 90% !important;
+    margin-left: 5% !important;
+    margin-right: 5% !important;
+
+}
+
+.description{
+    background-color: #051200;
+    margin-top: 20px;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-right: 5px;
+    padding-left: 5px;
+    border-radius: 40px;
+    color: #678e3d;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.logos{
+    background-color: #051200;  
+    margin-top: 20px;
+    width: 100%;
+    color: #f71c30;
+    border-radius: 40px;
+    font-size: 112px;
+    padding: 10PX;
+    text-align: center;
+    
+}
+.icono{
+    background-color: #fdfffe;
+    padding: 10px;
+    border-radius: 40px;
+    margin: 10px;
+}
+
+.pregunta{
+    font-size: 60px;
+    background-color: #051200;
+    color: #f71c30;
+    border-radius: 40px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+
+}
+
+.linea{
+    margin-top: 5px;
+    background-color: #fdfffe;
+    height: 3px;
+}
+
+.codigoHTML{
+    font-size: 30px;
+    text-align: center;
+    color: #f71c30;
+    background-color: #051200;
+    padding: 20px 10px;
+    border-radius: 40px;
+    font-weight: bold;
+}
+
+.ayHTML{
+    background-color: #051200;
+    padding: 20px 20px;
+    border-radius: 40px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #678e3d;
+    text-align: center;
+}
+
+
+@media only screen and (max-width: 1400px) {
+    .ayHTML{
+        background-color: #051200;
+        padding: 20px 20px;
+        border-radius: 40px;
+        font-weight: bold;
+        font-size: 12px;
+        color: #678e3d;
+        text-align: center;
+    }  
+    .antLINKHTML{
+        background-color: #051200;
+        color: #007ab3;
+        font-size: 15px !important;
+        text-align: center;
+        font-weight: bold;
+        padding: 10px;
+        border-radius: 40px;
+    
+    }
+}
+
+.antLINKHTML{
+    background-color: #051200;
+    color: #007ab3;
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 40px;
+
+}
+
+.foot{
+    background-color: #051200;
+    font-size: 40px;
+    color: #fdfffe;
+    font-weight: normal;
+    text-align: center;
+}
+
+.flechaabajo{
+    text-align: center;
+    font-size: 100px;
+    color: #678e3d;
+}
+
+.linkINFO{
+    font-size: 60px;
+    background-color: #051200;
+    color: #007ab3 !important;
+    text-align: center;
+    border-radius: 40px;
 }
