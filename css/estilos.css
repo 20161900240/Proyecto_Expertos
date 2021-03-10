@@ -84,8 +84,6 @@ body{
 
 
 
-
-
 .imgLogo{
     border-radius: 40px;
     height: 100px;
@@ -99,6 +97,15 @@ body{
     padding: 10px;
   
 }
+
+.icons1:hover, .icons2:hover{
+    color: #f71c30;  
+}
+
+.icons3:hover{
+    color: #007ab3;
+}
+
 .icons2{
     font-size: 60px !important;
     font-size: 'Roboto', sans-serif;
@@ -417,4 +424,70 @@ body{
     width: 150px;
     border-radius: 50%;
     margin-top: -75px;
+}
+
+/* Parte de la pagina preguntas frecuentes*/
+
+.boxFormPreguntasFrecuentes{
+    border-radius: 10px;
+    background-color: #051200;
+    color: #fdfffe;
+    margin-top: 5%;
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom:5%;
+   
+
+}
+
+.titlePreFre{
+    font-size: 25px;
+    font-weight: bold;
+    display: block;
+    padding-top: 25px;   
+}
+
+.lineaPF{
+    width: 100%;
+    height: 3px;
+    background-color: #fdfffe;
+}
+
+.imgPF{
+   padding: 10px 10px;
+    width: 100px;
+    height: 100px;
+}
+
+.nombreUsrPF{
+    font-size: 15px;
+    margin-top: 10px;
+    padding-bottom: 0px;
+    font-weight: bold;
+    display: block;
+}
+
+.lineaComPF{
+    width: 100%;
+    height: 1px;
+    background-color: #fdfffe;
+
+}
+
+.returnPF{
+    font-size: 25px;
+    color: #fdfffe;
+    display: block;
+    padding: 20px;
+}
+
+.respuestPF{
+    color: #007ab3;
+}
+
+.correPF{
+    display: block;
+    margin-top: 10px;
+    color: #678e3d;
 }
