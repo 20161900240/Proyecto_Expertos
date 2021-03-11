@@ -4,7 +4,7 @@
 
 body{
     background-color: #f71c30;
-    font-size: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .navbarPersonalizada{
@@ -16,7 +16,7 @@ body{
 
 .Titulo{
     font-size: 60px !important;
-    font-size: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: bolder;
     margin-left: -30% !important;
     color: #f71c30 !important; 
@@ -25,7 +25,7 @@ body{
 @media only screen and (max-width: 1200px) {
     .Titulo{
         font-size: 60px !important;
-        font-size: 'Roboto', sans-serif;
+        font-family: 'Roboto', sans-serif;
         font-weight: bolder;
         margin-left: -5% !important;
         color: #f71c30 !important; 
@@ -91,10 +91,10 @@ body{
 
 .icons1{
     font-size: 60px !important;
-    font-size: 'Roboto', sans-serif;
-    font-weight: bold;
-    color: #007ab3;
-    padding: 10px;
+    font-size: 'Roboto', sans-serif !important;
+    font-weight: bold !important;
+    color: #007ab3 !important;
+    padding: 10px !important ;
   
 }
 
@@ -482,6 +482,12 @@ body{
     padding: 20px;
 }
 
+.returnPF a:hover{
+    color: #f71c30 !important;
+    cursor: pointer;
+    
+}
+
 .respuestPF{
     color: #007ab3;
 }
@@ -490,4 +496,43 @@ body{
     display: block;
     margin-top: 10px;
     color: #678e3d;
+}
+
+/* Par de la pagina de pagos*/
+.cont-PaPagos{
+    background-color: #051200;
+    border-radius: 40px;
+    color: #fdfffe;
+    padding: 40px 40px;
+    margin-top: 20%;
+    margin-bottom: 20%;
+}
+
+.cont-PaPagos p{
+    color: #f71c30;
+    
+}
+
+.cont-PaPagos h1{
+    text-align: center;
+    
+}
+
+.IR{
+    font-size: 30px;
+    text-align: left;
+    color: #678e3d;
+    margin-top: 10px;
+}
+
+.IRATRAS i{
+    color: #007ab3 !important;
+    font-size: 30px !important;
+    text-align: right !important;
+}
+
+.IRATRAS i:hover{
+    color: #f71c30 !important;
+    font-size: 30px !important;
+    text-align: right !important;
 }
