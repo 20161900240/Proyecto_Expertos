@@ -634,3 +634,75 @@ body{
 .pregu{
     font-size: 20px !important;
 }
+
+/* Estilizando pagina del perfil*/
+
+.imgEP{
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+}
+
+.file-select {          
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    font-size: 20px !important;
+}
+
+.file-select {          
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    font-size: 20px !important;
+    
+}
+   
+.file-select::before{
+    background-color: #007ab3;
+    color: #fdfffe;
+    display: flex;            
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    content: 'Cambiar'; /* testo por defecto */
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 15px;
+    bottom: 15px;  
+    border: #f71c30 solid 2px;  
+             
+}
+   
+.file-select input[type="file"] {
+    opacity: 0;
+    width: 100% !important;
+    height: 80px;
+    display: inline-block;   
+    font-size: 30px !important;  
+    font-weight: 900 !important;
+
+}
+
+#src-file1::before {
+    content: 'ACTUALIZAR FOTO';
+}
+
+.btnGUARDARfot{
+    background-color: #007ab3 !important;
+    font-size: 20px;
+    padding: 10px 10px;
+    border-radius: 10px;
+    border: #f71c30 solid 2px;
+    width: 100%;
+    color: #fdfffe;
+    margin-bottom: 4px;
+}
+
+.desc{
+    outline: none;
+    padding: 5px 5px;
+    border-radius: 10px;
+}
+  
