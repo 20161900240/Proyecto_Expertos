@@ -40,7 +40,7 @@
                                         <i class="fas fa-share-square"></i>
                                     </label>
                                     <div class="row text-center ">
-                                        <div class="col-3 question"><i class="fas fa-head-side-virus"></i></div>
+                                        <div class="col-3 question" data-toggle="modal" data-target="#exampleModalCenter"><i class="fas fa-head-side-virus"></i></div>
                                         <div class="col-3 return" ><a  href="index.html"><i class="fas fa-undo-alt"></i></a></div>
                                         <div class="col-3 log"><a href="pagina_registro.html"><i class="fas fa-user-plus"></i></a></div>
                                         <div class="col-3 face"><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-square"></i></a></div>
@@ -53,6 +53,31 @@
             <div class="col-lg-4 col-md-2 col-sm-12"></div>
         </div>
    </div>
+
+   <!-- MODAL DE OLVIDÓ CONTRASEÑA-->
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="TITU">
+          <span class=" text-center" >RECUPERANDO TU CONTRASEÑA</span>
+        </div>
+        <label class="correo mt-4">
+         <span>CORREO AL CUAL TENGA ACCESO:</span>
+         <input type="email" name="" id="" placeholder="INGRESE SU CORREO">
+        </label>
+        <label class="correo mt-2 mb-4">
+            <span>CODIGO ENVIADO A SU CORREO:</span>
+            <input type="number" name="" id="" placeholder="INGRESE EL CODIGO QUE LE HEMOS ENVIADO A SU CORREO">
+           </label>
+        <div class="row">
+            <div class="col-6"><button type="button" class="btn ">COMPROBAR <i class="fas fa-arrow-circle-right"></i></button></div>
+            <div class="col-6"><button type="button" class="btn " data-dismiss="modal">REGRESAR <i class="fas fa-undo-alt"></i></button></div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 
