@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon/Favicon_DW/logo.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css"/>
+    <script src="https://kit.fontawesome.com/fe98bd9eae.js" crossorigin="anonymous"></script><!--FontAwesome-->
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>DevWeb</title>
+</head>
+<body>
+   
+        <div class="fixed-top navDES">
+            <div class="row">
+                <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 text-lg-center text-sm-center items "><img class="imgLOGPD" src="img/logo/logo_DW/logo.png" alt=""></div>
+                <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 text-lg-center text-sm-center items "><input class="inPD" disabled type="text" name="" id="" value="PRoyect 1"></div>
+                <div data-toggle="modal" data-target="#modalAbrirCapeta" class="col-xl-1 col-lg-1 col-md-12 col-sm-12 text-lg-center text-sm-center items "><i class="far fa-folder-open"></i></div>
+                <div data-toggle="modal" data-target="#modalNuevoPROYECTO" class="col-xl-1 col-lg-1 col-md-12 col-sm-12 text-lg-center text-sm-center items "><i class="fas fa-folder-plus"></i></div>
+                <div data-toggle="modal" data-target="#modalEliminarPROYECTO" class="col-xl-1 col-lg-1 col-md-12 col-sm-12 text-lg-center text-sm-center items "><i class="fas fa-folder-minus"></i></div>
+                <div data-toggle="modal" data-target="#modalIntegrantesPROYECTO" class="col-xl-1 col-lg-1 col-md-12 col-sm-12 text-lg-center text-sm-center items "><i class="fas fa-user-friends"></i></div>
+                <div data-toggle="modal" data-target="#modalAnadiendoIntegrantesCreandoEquipo" class="col-xl-1 col-lg-1 col-md-12 col-sm-12 text-lg-center text-sm-center items "><i class="fas fa-user-plus"></i></div>
+                <div class="col-xl-1 col-lg-1 col-md-12 col-sm-12 text-lg-center text-sm-center items "><a href="pagina_editar_perfil.html"><i class="fas fa-user-cog"></i></a></div>
+                <div class="col-xl-1 col-lg-1 col-md-12 col-sm-12 text-lg-center text-sm-center items "><img class="fpPD rounded-circle" src="img/logo/logo_DW/logo.png" alt=""></div>
+                <div class="col-xl-1 col-lg-1 col-md-12 col-sm-12 text-lg-center text-sm-center items "><a href="index.html"><i class="fas fa-sign-out-alt"></i></a></div>
+            </div>
+            
+        </div>   
+        
+
+        <!-- MODALES -->
+        <!--MODAL DE ABRIR UN PROYECTO-->
+        <div class="modal fade" id="modalAbrirCapeta" tabindex="-1" role="dialog" aria-labelledby="modalAbrirCapetaLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+              <div class="modal-content contenidoMODAL text-center">
+              <div class=" titMODAL text-center">
+                <span>Abrir Proyecto <i class="far fa-folder-open"></i></span>
+              </div>
+                <div class="row claITEM mt-4">
+                  <div class="col-10">
+                    <span>PROYECTO 1</span>
+                  </div>
+                  <div class="col-2">
+                   <i class="far fa-folder-open"></i>
+                  </div>
+                </div>
+                <div class="row claITEM mt-4">
+                  <div class="col-10">
+                    <span>PROYECTO 1</span>
+                  </div>
+                  <div class="col-2">
+                   <i class="far fa-folder-open"></i>
+                  </div>
+                </div>
+                <div class="row claITEM mt-4">
+                  <div class="col-10">
+                    <span>PROYECTO 1</span>
+                  </div>
+                  <div class="col-2">
+                   <i class="far fa-folder-open"></i>
+                  </div>
+                </div>
+              
+               
+              </div>  
+            </div>
+        </div> 
+        
+        
+        <!--MODAL DE modalNuevoPROYECTOO--> 
+       <div class="modal fade" id="modalNuevoPROYECTO" tabindex="-1" role="dialog" aria-labelledby="modalNuevoPROYECTO" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+          <div class="modal-content contenidoMODAL text-center">
+          <div class="titMODAL text-center">
+            <span>Nuevo Proyecto <i class="fas fa-folder-plus"></i></span>
+          </div>
+            <div class="row claITEM mt-4">
+              <div class="col-4">
+                  <span>NOMBRE:</span>
+              </div>
+              <div class="col-8">
+                <input type="text" name="" id="" placeholder="Nombre del proyecto">
+              </div>
+            </div>
+            <div class="row claITEM mt-4">
+              <div class="col-4">
+                  <span>CARPETA:</span>
+              </div>
+              <div class="col-8">
+                <input type="text" name="" id="" placeholder="Nombre Carpeta">
+              </div>
+            </div>
+
+            <div class="row claITEM mt-4">
+              <div class="col-6">
+                <button type="button">CREAR CARPETA  <i class="fas fa-folder-plus"></i></button>
+              </div>
+              <div class="col-6">
+                <button type="button">CREAR PROYECTO  <i class="fas fa-folder-plus"></i></button>
+              </div>
+            </div>
+          </div>  
+        </div>
+        </div> 
+        
+        
+        <!--MODAL DE ELIMINAR UN PROYECTO--> 
+        <div class="modal fade" id="modalEliminarPROYECTO" tabindex="-1" role="dialog" aria-labelledby="modalEliminarPROYECTO" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content contenidoMODAL text-center">
+            <div class="titMODAL text-center">
+              <span>Eliminar Proyecto <i class="fas fa-folder-minus"></i></span>
+            </div>
+              <div class="row claITEM mt-4">
+                <div class="col-10">
+                  <span>PROYECTO 1</span>
+                </div>
+                <div class="col-2">
+                  <i class="fas fa-folder-minus"></i>
+                </div>
+              </div>
+              <div class="row claITEM mt-4">
+                <div class="col-10">
+                  <span>PROYECTO 1</span>
+                </div>
+                <div class="col-2">
+                  <i class="fas fa-folder-minus"></i>
+                </div>
+              </div>
+              <div class="row claITEM mt-4">
+                <div class="col-10">
+                  <span>PROYECTO 1</span>
+                </div>
+                <div class="col-2">
+                  <i class="fas fa-folder-minus"></i>
+                </div>
+              </div>
+            
+             
+            </div>  
+          </div>
+        </div> 
+
+        <!--MODAL DE Listar integrantes en uN PROYECTO--> 
+        <div class="modal fade" id="modalIntegrantesPROYECTO" tabindex="-1" role="dialog" aria-labelledby="modalIntegrantesPROYECTO" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content contenidoMODAL text-center">
+            <div class=" titMODAL text-center">
+              <select name="" id="">
+                <option value=""> EQUIPO LOS LOCOS</option>
+                <option value=""> EQUIPO LOS LOCOS</option>
+                <option value=""> EQUIPO LOS LOCOS</option>
+                <option value=""> EQUIPO LOS LOCOS</option>
+                <option value=""> EQUIPO LOS LOCOS</option>
+                <option value=""> EQUIPO LOS LOCOS</option>
+              </select>
+            </div>
+              <div class="row claITEM mt-4">
+                <div class="col-3">
+                  <img src="img/favicon/Favicon_DW/logo.jpg" alt="">
+                </div>
+                <div class="col-7 text-left ">
+                  <span class="nombreIE">Ada Marquez</span> 
+                  <span class="correoIE">adamarques@gmial.com</span>
+                </div>
+                <div class="col-2">
+                  <i class="fas fa-user-minus"></i>
+                </div>
+              </div>
+              
+              <div class="row claITEM mt-4">
+                <div class="col-3">
+                  <img src="img/favicon/Favicon_DW/logo.jpg" alt="">
+                </div>
+                <div class="col-7 text-left ">
+                  <span class="nombreIE">Ada Marquez</span> 
+                  <span class="correoIE">adamarques@gmial.com</span>
+                </div>
+                <div class="col-2">
+                  <i class="fas fa-user-minus"></i>
+                </div>
+              </div>
+
+              <div class="row claITEM mt-4">
+                <div class="col-3">
+                  <img src="img/favicon/Favicon_DW/logo.jpg" alt="">
+                </div>
+                <div class="col-7 text-left ">
+                  <span class="nombreIE">Ada Marquez</span> 
+                  <span class="correoIE">adamarques@gmial.com</span>
+                </div>
+                <div class="col-2">
+                  <i class="fas fa-user-minus"></i>
+                </div>
+              </div>
+             
+            </div>  
+          </div>
+        </div> 
+
+        <!--MODAL DE Listar integrantes en uN PROYECTO--> 
+        <div class="modal fade" id="modalAnadiendoIntegrantesCreandoEquipo" tabindex="-1" role="dialog" aria-labelledby="modalAnadiendoIntegrantesCreandoEquipo" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-lg " role="document">
+            <div class="modal-content contenidoMODAL text-center">
+              <div class=" titMODAL">
+                <div class="text-center">
+                  <span>AÑADIENDO USUARIOS AL EQUIPO <i class="fas fa-user-plus"></i></span>
+                </div>
+              </div>
+              <div class="row claITEM mt-4">
+                <div class="col-4">
+                    <span>NOMBRE EQUIPO:</span>
+                </div>
+                <div class="col-8">
+                  <input type="text" name="" id="" placeholder="Nombre del equipo">
+                </div>
+              </div>
+              <div class="row claITEM mt-4">
+                <div class="col-4">
+                    <span>CORREO:</span>
+                </div>
+                <div class="col-8">
+                  <input type="email" name="" id="" placeholder="Correo del usuario a invitar">
+                </div>
+              </div>
+  
+              <div class="row claITEM mt-4">
+                <div class="col-6">
+                  <button type="button">CREAR EQUIPO  <i class="fas fa-folder-plus"></i></button>
+                </div>
+                <div class="col-6">
+                  <button type="button">ENVIAR INVITACIÓN <i class="fas fa-paper-plane"></i></button>
+                </div>
+              </div>
+            
+             
+            </div>  
+          </div>
+        </div> 
+       
+
+
+
+          <footer class="fixed-bottom">
+            <div class="w-100">
+             <div class="col-12 footPD">
+              Derechos Reservados @CopyRight DevWeb
+             </div>
+            </div>
+          </footer>
+
+
+    
+    <script src="js/controlador.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

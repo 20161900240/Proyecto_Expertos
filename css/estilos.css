@@ -89,6 +89,7 @@ body{
     height: 100px;
 }
 
+
 .icons1{
     font-size: 60px !important;
     font-size: 'Roboto', sans-serif !important;
@@ -607,6 +608,11 @@ body{
     color: #fdfffe !important;
 }
 
+.contornoDATOS button a{
+    color: #051200 !important;
+}
+
+
 .contornoDATOS input{
     background-color: #fdfffe;
     font-size: 15px;
@@ -748,8 +754,8 @@ body{
   
 .modal-content{
    background-color: #f71c30 !important;
-   border: #051200 solid 2px;
-   padding: 20px 20px;
+   border: #051200 solid 2px !important;
+   padding: 20px 20px !important;
 }
 
 .correo span{
@@ -810,4 +816,193 @@ body{
     color: #051200 !important;
     outline: none !important;
     border:none;
+}
+
+/* ESTILIZANDO PAGINA DESARROLLADOR*/
+
+.navDES{
+    background-color: black;
+}
+
+.imgLOGPD{
+    border-radius: 10px;
+    width: 70%;
+    height: 65px;
+}
+
+.inPD{
+    width: 100%;
+    display: block;
+    font-size: 20px !important;
+    outline: none;
+    background-color: transparent !important;
+    color: #f71c30;
+    border: none;
+    margin-top: 25px;
+}
+
+.items{
+    font-size: 50px;
+    color: #f71c30 !important;
+    padding: 0px 5px 5px 5px !important;
+    align-items: center !important;
+    
+}
+
+.items:hover, .items:focus{
+    font-size: 50px;
+    color: #678e3d !important;
+    padding: 0px 5px 5px 5px !important;
+    align-items: center !important;
+    
+}
+
+
+
+.items a{
+    color: #f71c30 !important;
+}
+
+.items a:hover{
+    color: #678e3d !important;
+}
+
+.fpPD{
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+}
+
+
+.footPD{
+    background-color: #051200;
+    font-size: 15px;
+    color: #fdfffe;
+    font-weight: normal;
+    text-align: center; 
+}
+
+/*MODALES  */
+
+.contenidoMODAL{
+    text-align: center !important;
+    background-color: #051200 !important;
+    color: #fdfffe !important;
+    border: solid 4px #f71c30 !important;
+    border-radius: 10px !important;
+}
+
+.titMODAL{
+    background-color: #f71c30;
+    border-radius: 10px;
+    padding: 5px 5px;
+    text-align: center !important;
+    font-size: 25px !important;
+    align-items: center;
+    color: #051200;
+    font-weight: bold;
+}
+
+
+.claITEM div{
+    background-color: #f71c30;
+    color: #fdfffe;
+    text-align: center;
+    font-size: 15px;
+    padding: 5px 5px;
+    border-radius: 10px;
+    border: solid 2px #051200;
+    align-items: center;
+}
+
+.claITEM div:hover{
+    background-color: #051200;
+    color: #f71c30;
+    text-align: center;
+    font-size: 15px;
+    padding: 5px 5px;
+    border-radius: 10px;
+    border: solid 2px #f71c30;
+    align-items: center;
+}
+
+.claITEM div i{
+    font-size: 30px;
+    padding-top: 5px;
+}
+
+.claITEM div input{
+    width: 100%;
+    outline: none;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: transparent;
+    border: none;
+    color: #fdfffe;
+}
+
+.claITEM div input:focus{
+    width: 100%;
+    outline: none;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: transparent;
+    border: none;
+    color: #fdfffe;
+}
+
+.claITEM div span{
+    font-size: 25px;
+}
+
+.claITEM div button{
+    width: 100% !important;
+    outline: none !important;
+    background-color: transparent !important;
+    border: none;
+    font-size: 20px;
+}
+
+.claITEM div button:hover{
+    width: 100% !important;
+    outline: none !important;
+    background-color: transparent !important;
+    border: none;
+    overflow: hidden;
+    color: #fdfffe;
+}
+
+.claITEM div img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.nombreIE{
+    font-size: 18px !important;
+    display: block;
+}
+
+.correoIE{
+    font-size: 12px !important;
+    display: block;
+    color: #007ab3;
+}
+
+.titMODAL select{
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-weight: bold;
+}
+
+.titMODAL select:hover{
+    width: 100%;
+    border: solid #051200 2px;
+    outline: none;
+    background-color: #f71c30;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 5px 5px;
 }
